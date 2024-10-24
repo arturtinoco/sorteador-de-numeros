@@ -1,0 +1,74 @@
+main {
+    gap: 6.75rem;
+    width: 100%;
+
+    margin-inline: auto;
+
+    position: relative;
+
+    & #content {
+        gap: 2.375rem;
+        width: 31.75rem;
+
+        & header {
+            gap: .75rem;
+            width: 100%;
+
+            & h2 {
+                background: linear-gradient(90deg, var(--content-secondary) 0%, var(--background-gray) 100%);
+                width: 100%;
+
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+    
+            & h1 {
+                letter-spacing: -.04rem;
+            }
+        }
+
+        & #faq {
+            gap: 2.25rem;
+            width: 24.125rem;
+
+            & .item {
+                gap: .5rem;
+                align-items: flex-start;
+
+                & svg {
+                    min-width: 1.25rem;
+                    width: 1.25rem;
+                    height: 1.25rem;
+
+                    & path {
+                        stroke: var(--content-brand);
+                    }
+                }
+
+                & .text-container {
+                    & h3 {
+                        color: var(--content-brand);
+                    }
+
+                    & p {
+                        color: var(--content-secondary);
+                    }
+                }
+            }
+        }
+    }
+
+    & #form-wrapper {
+        gap: 2.5rem;
+        width: 30.125rem;
+
+        & header {
+            gap: 2px;
+
+            & p {
+                color: var(--content-secondary);
+            }
+        }
+    }
+}
