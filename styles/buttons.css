@@ -80,3 +80,9 @@ button[type="submit"]:active {
         --angle: 360deg;
     }
 }
+
+@media (width < 85.375rem) {
+    & button[type="submit"] {
+        width: 100%;
+    }
+}

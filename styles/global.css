@@ -78,3 +78,21 @@ a {
     position: relative;
     z-index: 1;
 }
+
+@media (width < 85.375rem) {
+    & .page {
+        gap: 2.875rem;
+
+        width: 24.375rem;
+        /*min-height: 22.25rem;*/
+        min-height: 100vh;
+
+        padding: 2.75rem 2.25rem;
+
+        overflow-y: scroll;
+
+        & nav {
+            margin-inline: auto;
+        }
+    }
+}
