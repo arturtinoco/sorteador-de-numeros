@@ -78,6 +78,17 @@ anyInputField.oninput = () => {
     getValues()
 }
 
+// Callback a timed function for each generated number to be assigned to it's newly made DOM element
+function drawListedNumbers() {
+    for (let i = 0; i < drawnList.length; i++) {
+        setTimeout(() => {
+            // Create a new DOM element that will have the current listed number assigned to it
+            createResultElement(drawnList[i])
+            console.log(`resultado até então: ${drawnList}`)//!!!!!!!
+        }, delayMS * i);
+    }
+}
+
 // Update button text and display replay icon
 function updateButton() {
 /*
