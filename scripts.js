@@ -57,6 +57,12 @@ function generateNumbers() {
     } 
 }
 
+// Get current range input values
+function getValues() {
+    rangeMin = Number(document.getElementById("from-number").value)
+    rangeMax = Number(document.getElementById("to-number").value)
+}
+
 // Trigger result interface when clicked on submit button
 drawButton.addEventListener("click", () => {
     // Switch input area to div#results on first draw
