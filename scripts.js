@@ -78,6 +78,36 @@ anyInputField.oninput = () => {
     getValues()
 }
 
+// Update button text and display replay icon
+function updateButton() {
+/*
+<button type="submit" class="flex">
+    <span class="label-small">SORTEAR NOVAMENTE</span>
+    <div class="replay">
+        <img src="..." alt="...">
+        <img src="..." alt="...">
+    </div>
+</button>
+*/
+    drawButton.querySelector("span").innerText = "SORTEAR NOVAMENTE"
+
+    drawButton.removeChild(straightArrow)
+
+    // Create new animated replay icon
+    const iconContainer = document.createElement("div")
+    iconContainer.classList.add("replay")
+    drawButton.appendChild(iconContainer)
+
+    const roundArrow = document.createElement("img")
+    roundArrow.setAttribute("src", "assets/icons/round-arrow.png")
+    roundArrow.setAttribute("alt", "Ícone de replay")
+    iconContainer.appendChild(roundArrow)
+
+    const playIcon = document.createElement("img")
+    playIcon.setAttribute("src", "assets/icons/play.png")
+    iconContainer.appendChild(playIcon)
+}
+
 // Trigger result interface when clicked on submit button
 drawButton.addEventListener("click", () => {
     // Switch input area to div#results on first draw

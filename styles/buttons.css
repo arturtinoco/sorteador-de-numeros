@@ -41,11 +41,33 @@ button[type="submit"] {
     position: relative;
     cursor: pointer;
 
+    & .replay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        position: relative;
+
+        & img {
+            position: absolute;
+        }
+
+        & img[src*="round-arrow"] {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
     &:hover {
         background-color: var(--background-secondary);
 
-        & img {
+        & img[src*="arrow-right"] {
             animation: slide 600ms linear alternate infinite;
+        }
+
+        & img[src*="round-arrow"] {
+            animation: rotate-infinite 1.5s linear infinite;
         }
     }
 }
@@ -78,6 +100,14 @@ button[type="submit"]:active {
         --angle: 0deg;
     } to {
         --angle: 360deg;
+    }
+}
+
+@keyframes rotate-infinite {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
     }
 }
 
