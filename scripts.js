@@ -78,6 +78,29 @@ anyInputField.oninput = () => {
     getValues()
 }
 
+/*
+<div class="result-wrapper flex">
+    <span class="overline">...</span>
+</div>
+*/
+// Build structure as shown in comment above 
+function createResultElement(newDraw) {
+    // Creates new pink square container for new number
+    const newNumContainer = document.createElement("div")
+    newNumContainer.classList.add("result-wrapper", "flex")
+
+    // Add element in div#results
+    results.appendChild(newNumContainer)
+
+    // Create new text element that displays the new number value
+    const newNum = document.createElement("span")
+    newNum.classList.add("overline")
+    newNum.textContent = String(newDraw)
+
+    // Add element in new div.result-wrapper
+    newNumContainer.appendChild(newNum)
+}
+
 // Callback a timed function for each generated number to be assigned to it's newly made DOM element
 function drawListedNumbers() {
     for (let i = 0; i < drawnList.length; i++) {
