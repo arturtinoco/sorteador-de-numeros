@@ -68,6 +68,16 @@ function getValues() {
     rangeMax = Number(document.getElementById("to-number").value)
 }
 
+// Format input values
+anyInputField.oninput = () => {
+    // Remove non-numerical characters
+    let value = anyInputField.value.replace(/\D/g, "")
+
+    // Update input value
+    anyInputField.value = Number(value)
+    getValues()
+}
+
 // Trigger result interface when clicked on submit button
 drawButton.addEventListener("click", () => {
     // Switch input area to div#results on first draw
