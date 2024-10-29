@@ -112,6 +112,17 @@ function drawListedNumbers() {
     }
 }
 
+// Clean result container for a new round
+function updateResultContainer(resultRoundIndex) {
+    // Change div#results header content
+    formHeader.style.textAlign = "center"
+    headerH4.innerText = "RESULTADO DO SORTEIO"
+    headerP.style.font = "var(--overline)"
+    headerP.innerText = `${resultRoundIndex}° RESULTADO`
+
+    results.innerHTML = ""
+}
+
 // Update button text and display replay icon
 function updateButton() {
 /*
