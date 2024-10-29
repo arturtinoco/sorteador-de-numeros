@@ -22,6 +22,11 @@ let drawnList = []
 let delayMS = 2500 // 2500ms -> 2.5s between each draw
 let repeatNumber = document.querySelector("input[type='checkbox']:checked")
 
+// Include min and max values from user's input range
+function getRandomNum(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
 // Generate a new random result from user inputs
 function generateNumbers() {
     getValues()
